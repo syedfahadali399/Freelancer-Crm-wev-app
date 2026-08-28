@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevDesk - Add Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d8e3fb",
+                        "surface-variant": "#e0e3e5",
+                        "on-primary-fixed-variant": "#3c475a",
+                        "secondary-fixed": "#e2dfff",
+                        "on-primary-fixed": "#111c2d",
+                        "tertiary": "#00113b",
+                        "outline-variant": "#c5c6cd",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#dbe1ff",
+                        "outline": "#75777d",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#45474c",
+                        "on-secondary-container": "#fffbff",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-fixed-variant": "#003ea8",
+                        "on-primary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "secondary": "#4b41e1",
+                        "primary-container": "#1e293b",
+                        "tertiary-container": "#002367",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#545f73",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-primary": "#bcc7de",
+                        "secondary-container": "#645efb",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-background": "#191c1e",
+                        "on-tertiary-container": "#5f8aff",
+                        "on-secondary-fixed": "#0f0069",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#8590a6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary": "#091426",
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#00174b",
+                        "primary-fixed-dim": "#bcc7de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "sidebar-width": "260px",
+                        "card-gap": "20px",
+                        "gutter": "16px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "body-md": ["Inter"],
+                        "button": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "h2": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "h3": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[260px] bg-primary shadow-sm flex flex-col py-6 z-50">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center text-on-secondary font-bold">D</div>
+<div>
+<h1 class="font-h2 text-h2 font-bold text-on-primary">DevDesk</h1>
+<p class="font-label-sm text-label-sm text-on-primary/60">Freelancer CRM</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors font-body-md text-body-md active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors font-body-md text-body-md active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">group</span>
+                Clients
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 border-l-4 border-secondary bg-primary-container text-on-primary-container font-medium font-body-md text-body-md active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined fill">folder_open</span>
+                Projects
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors font-body-md text-body-md active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+                Invoices
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors font-body-md text-body-md active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+                Tasks
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors font-body-md text-body-md active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="ml-[260px] flex-1 flex flex-col min-h-screen w-[calc(100%-260px)]">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant shadow-sm flex items-center h-16 px-gutter sticky z-40">
+<div class="flex items-center gap-4">
+<h2 class="font-h3 text-h3 font-semibold text-primary">New Project</h2>
+</div>
+<div class="flex items-center gap-4 ml-auto">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<img alt="User Profile" class="w-8 h-8 rounded-full border border-outline-variant cursor-pointer" data-alt="A close-up portrait of a professional male user looking slightly off-camera with a neutral, pleasant expression. The lighting is soft and natural, typical of a modern professional headshot. He is wearing a dark, casual button-down shirt. The background is softly blurred and non-distracting. The overall aesthetic is clean, corporate, and approachable, fitting a high-quality user profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuCRBxelwQ6rZbtnMcwjIDi9QkWPPYS6xml-tZDlYAprv70MgIyyfNa2smphPc5tsAsFceD73DEg_vW0F0kUDNQCKxi5Z3PPPoUpG1f8JaHMnDQ4D4Gwb-zgwIm4EVEZ6U_jJIRY-2F7-WyuSnVyF8RB_rqxhA-xzm_R2ekAdtk4DJZ_PFDru8UKpzw8m8dpeCopJV4Owllbu7q9ZYpaxWIpUSOo0Ly6pzsn7b6dyhqW5LJYAQL0mWPqv5VSRNmGihI78Pd53gncI"/>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 p-container-padding overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- Back Link -->
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-secondary mb-6 transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    Back to Projects
+                </a>
+<!-- Form Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0_1px_3px_rgba(0,17,59,0.05)] overflow-hidden">
+<div class="p-6 border-b border-surface-variant">
+<h2 class="font-h3 text-h3 text-on-surface mb-1">Project Details</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Enter the core information to initiate a new project workflow.</p>
+</div>
+<form class="p-6 space-y-8">
+<!-- Group 1: Basic Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2 md:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="projectName">Project Name <span class="text-error">*</span></label>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="projectName" name="projectName" placeholder="e.g., Q3 Website Redesign" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="clientSelect">Client</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface font-body-md appearance-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="clientSelect" name="clientSelect">
+<option disabled="" selected="" value="">Select a client...</option>
+<option value="1">Acme Corp</option>
+<option value="2">Globex Corporation</option>
+<option value="3">Soylent Corp</option>
+<option value="4">Initech</option>
+<option value="new">+ Add New Client</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="statusSelect">Initial Status</label>
+<div class="relative">
+<select class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-2.5 text-on-surface font-body-md appearance-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="statusSelect" name="statusSelect">
+<option selected="" value="planning">Planning</option>
+<option value="in_progress">In Progress</option>
+<option value="on_hold">On Hold</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Group 2: Timeline & Financials -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="deadlineDate">Deadline</label>
+<div class="relative">
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg pl-10 pr-4 py-2.5 text-on-surface font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all [color-scheme:light]" id="deadlineDate" min="2023-11-01" name="deadlineDate" type="date"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">calendar_today</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="budget">Estimated Budget</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant font-body-md">$</span>
+<input class="w-full bg-surface-bright border border-outline-variant rounded-lg pl-8 pr-4 py-2.5 text-on-surface font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all" id="budget" name="budget" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Group 3: Details -->
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" for="description">Project Description</label>
+<textarea class="w-full bg-surface-bright border border-outline-variant rounded-lg px-4 py-3 text-on-surface font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all resize-y" id="description" name="description" placeholder="Outline the scope, deliverables, and any key notes..." rows="4"></textarea>
+</div>
+<!-- Form Actions -->
+<div class="pt-4 flex items-center justify-end gap-4 border-t border-surface-variant">
+<button class="px-5 py-2.5 rounded-lg border border-outline-variant text-on-surface font-button text-button hover:bg-surface-container-low transition-colors focus:ring-2 focus:ring-outline/20 outline-none" type="button">
+                                Cancel
+                            </button>
+<button class="px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-button text-button hover:bg-secondary/90 shadow-[0_1px_2px_rgba(75,65,225,0.2)] transition-all focus:ring-2 focus:ring-secondary/50 outline-none flex items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                                Create Project
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</body></html>

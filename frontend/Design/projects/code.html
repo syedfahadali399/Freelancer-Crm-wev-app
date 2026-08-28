@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Active Projects - DevDesk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#fffbff",
+                      "background": "#f7f9fb",
+                      "surface": "#f7f9fb",
+                      "secondary-container": "#645efb",
+                      "on-tertiary-fixed": "#00174b",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "primary-container": "#1e293b",
+                      "on-surface": "#191c1e",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#00113b",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-tertiary-fixed-variant": "#003ea8",
+                      "inverse-primary": "#bcc7de",
+                      "on-surface-variant": "#45474c",
+                      "on-primary-container": "#8590a6",
+                      "inverse-surface": "#2d3133",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e6e8ea",
+                      "surface-bright": "#f7f9fb",
+                      "tertiary-fixed": "#dbe1ff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#3323cc",
+                      "surface-variant": "#e0e3e5",
+                      "primary-fixed-dim": "#bcc7de",
+                      "secondary-fixed": "#e2dfff",
+                      "outline-variant": "#c5c6cd",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "on-primary-fixed": "#111c2d",
+                      "tertiary-container": "#002367",
+                      "primary-fixed": "#d8e3fb",
+                      "surface-container": "#eceef0",
+                      "secondary": "#4b41e1",
+                      "on-secondary-fixed": "#0f0069",
+                      "on-primary": "#ffffff",
+                      "on-background": "#191c1e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#5f8aff",
+                      "surface-tint": "#545f73",
+                      "on-primary-fixed-variant": "#3c475a",
+                      "outline": "#75777d",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#c3c0ff",
+                      "surface-container-low": "#f2f4f6",
+                      "primary": "#091426"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sidebar-width": "260px",
+                      "gutter": "16px",
+                      "container-padding": "24px",
+                      "unit": "4px",
+                      "card-gap": "20px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "h3": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "h2": [
+                              "Inter"
+                      ],
+                      "h1": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "h3": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "h2": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "h1": [
+                              "30px",
+                              {
+                                      "lineHeight": "38px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[260px] bg-primary dark:bg-primary shadow-sm z-20">
+<div class="flex flex-col h-full py-6">
+<!-- Brand Logo -->
+<div class="px-6 mb-8">
+<div class="font-h2 text-h2 font-bold text-on-primary">DevDesk</div>
+<div class="font-label-sm text-label-sm text-on-primary-container mt-1">Freelancer CRM</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 overflow-y-auto">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                            Dashboard
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">group</span>
+                            Clients
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 border-l-4 border-secondary bg-primary-container text-on-primary-container font-medium hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+                            Projects
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+                            Invoices
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+                            Tasks
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container/70 hover:text-on-primary-container hover:bg-primary-container/50 transition-colors active:scale-[0.98] transition-transform font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                            Settings
+                        </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-[260px] flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 bg-surface dark:bg-background border-b border-outline-variant dark:border-outline shadow-sm flex items-center justify-between h-16 px-gutter z-10 sticky">
+<div class="font-h3 text-h3 font-semibold text-primary dark:text-on-background invisible">DevDesk</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 text-on-surface-variant">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 ml-2 border border-outline-variant">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a person with short hair, smiling slightly, set against a blurred background. The lighting is bright and even, fitting for a modern corporate or freelancer profile picture within a clean UI environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhR7bzVfgh3Im9xGNOCao-WtUWWp3J-ZzeFaCRegxLs6zwV5GBBZHjS59cvGBBa-O4VlBtrTq_azXczvf84HnGG_p1HZMinCDsRa9KmGcwIacCWyATiT4ncL9a7jbtLWaakHBsnL3iEks_vVtDCifu3xJqYefFUb8Si-3h1e-nXtpKA6b4lAZL7UDW2e6MYs5AwupwGF8Oc0xJywblhpWM7TWT2OU8add54jQwJs10CkdfZ7ds8bKcSlV5t4IStIJaxoMdp7Y3yY8"/>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 p-container-padding max-w-[1440px] mx-auto w-full">
+<!-- Page Header -->
+<div class="flex items-center justify-between mb-8">
+<div>
+<h1 class="font-h1 text-h1 text-primary">Active Projects</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Manage and track your ongoing client work.</p>
+</div>
+<button class="bg-secondary text-white font-button text-button px-4 py-2 rounded-lg hover:bg-secondary/90 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+                    New Project
+                </button>
+</div>
+<!-- Filters & Search Bar -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant shadow-[0_1px_3px_rgba(0,0,0,0.05)] p-4 mb-6 flex flex-wrap gap-4 items-center justify-between">
+<div class="flex-1 min-w-[300px] relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface rounded border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 font-body-md text-body-md text-on-surface outline-none transition-all" placeholder="Search projects or clients..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="appearance-none bg-surface border border-outline-variant rounded pl-4 pr-10 py-2 font-body-md text-body-md text-on-surface focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none cursor-pointer">
+<option value="">All Statuses</option>
+<option value="on-track">On Track</option>
+<option value="at-risk">At Risk</option>
+<option value="delayed">Delayed</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Data Table Grid -->
+<div class="bg-surface-container-lowest rounded-lg border border-surface-variant shadow-[0_1px_3px_rgba(0,0,0,0.05)] overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-variant bg-surface">
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Project Name</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Client</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Deadline</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">Budget</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="py-3 px-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider w-12"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-4">
+<div class="font-body-md text-body-md font-medium text-primary">Acme Corp Rebrand</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Design &amp; Strategy</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold">A</div>
+<span class="font-body-md text-body-md text-on-surface">Acme Corporation</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">Oct 15, 2023</td>
+<td class="py-4 px-4 font-body-md text-body-md text-primary font-medium text-right">$12,500</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">On Track</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-4">
+<div class="font-body-md text-body-md font-medium text-primary">E-commerce Platform Migration</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Web Development</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-label-sm font-bold">Z</div>
+<span class="font-body-md text-body-md text-on-surface">Zenith Retail</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">Nov 01, 2023</td>
+<td class="py-4 px-4 font-body-md text-body-md text-primary font-medium text-right">$28,000</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-error-container text-on-error-container">At Risk</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-4 px-4">
+<div class="font-body-md text-body-md font-medium text-primary">Mobile App MVP</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">iOS App</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">N</div>
+<span class="font-body-md text-body-md text-on-surface">Nova Tech</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-md text-body-md text-on-surface">Sep 30, 2023</td>
+<td class="py-4 px-4 font-body-md text-body-md text-primary font-medium text-right">$18,500</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">On Track</span>
+</td>
+<td class="py-4 px-4 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination Footer -->
+<div class="bg-surface border-t border-surface-variant px-4 py-3 flex items-center justify-between">
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                        Showing <span class="font-medium text-on-surface">1</span> to <span class="font-medium text-on-surface">3</span> of <span class="font-medium text-on-surface">12</span> projects
+                    </div>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-outline-variant rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-low transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled="">Previous</button>
+<button class="px-3 py-1 border border-outline-variant rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-low transition-colors">Next</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

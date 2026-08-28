@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+.typing-text {
+  display: inline-flex;
+  align-items: center;
+}
+
+.typing-cursor {
+  width: 1px;
+  height: 1.2em;
+  margin-left: 0.25rem;
+  background-color: currentColor;
+  animation: blink-cursor 1s step-start infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+.trusted-marquee {
+  overflow: hidden;
+}
+
+.trusted-marquee-track {
+  display: flex;
+  min-width: max-content;
+  animation: marquee-left-right 12s linear infinite;
+}
+
+.hover-3d {
+  perspective: 1200px;
+}
+
+.hover-3d-card {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.hover-3d-card img {
+  transition: transform 0.35s ease;
+}
+
+.hover-3d:hover .hover-3d-card {
+  transform: rotateY(12deg) rotateX(6deg);
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.18);
+}
+
+.hover-3d:hover .hover-3d-card img {
+  transform: translateZ(24px);
+}
+
+@keyframes marquee-left-right {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-marquee-track {
+    animation: none;
+  }
+}
+
+.swiper-horizontal
+              > .swiper-pagination-bullets
+              .swiper-pagination-bullet,
+            .swiper-pagination-horizontal.swiper-pagination-bullets
+              .swiper-pagination-bullet {
+              width: 16px !important;
+              height: 4px !important;
+              border-radius: 5px !important;
+              margin: 0 6px !important;
+            }
+
+            .swiper-pagination {
+              bottom: 2px !important;
+              position: relative !important;
+              margin-top: 20px;
+            }
+
+            .swiper-wrapper {
+              height: max-content !important;
+              width: max-content !important;
+              padding-bottom: 64px;
+            }
+
+            .swiper-pagination-bullet-active {
+              background: #4f46e5 !important;
+            }
+
+            .swiper-slide.swiper-slide-active
+              > .slide_active\:border-indigo-600 {
+              --tw-border-opacity: 1;
+              border-color: rgb(79 70 229 / var(--tw-border-opacity));
+            }
+
+            .swiper-slide.swiper-slide-active
+              > .group
+              .slide_active\:text-gray-800 {
+              --tw-text-opacity: 1;
+              color: rgb(31 41 55 / var(--tw-text-opacity));
+            }
