@@ -107,3 +107,22 @@
               --tw-text-opacity: 1;
               color: rgb(31 41 55 / var(--tw-text-opacity));
             }
+
+/* Mobile sidebar drawer — CSS transform avoids Tailwind production conflicts */
+.mobile-sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.mobile-sidebar[data-open="true"] {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 1024px) {
+  .mobile-sidebar {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}

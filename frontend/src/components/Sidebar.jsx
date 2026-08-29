@@ -14,29 +14,25 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <aside
-      className={`
-        fixed left-0 top-0 z-40 h-full w-[260px] bg-[#091426] text-white flex flex-col py-6
-        transition-transform duration-300 ease-in-out
-        -translate-x-full lg:translate-x-0
-        ${isOpen ? 'max-lg:translate-x-0' : ''}
-      `}
+      data-open={isOpen}
+      className="mobile-sidebar fixed left-0 top-0 z-50 h-full w-[260px] max-w-[85vw] bg-[#091426] text-white flex flex-col py-6 shadow-xl lg:shadow-none"
     >
-      {/* Header row: logo + close button (mobile only) */}
-      <div className="px-6 mb-8 flex items-start justify-between">
-        <div className="flex flex-col gap-1">
+      <div className="px-6 mb-8 flex items-start justify-between gap-3">
+        <div className="flex flex-col gap-1 min-w-0">
           <span className="text-2xl font-bold tracking-tight">DevDesk</span>
           <span className="text-xs text-[#8590a6] uppercase tracking-wider font-semibold">Freelancer CRM</span>
         </div>
         <button
+          type="button"
           onClick={onClose}
-          className="lg:hidden text-[#8590a6] hover:text-white transition-colors mt-1"
+          className="lg:hidden shrink-0 p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors"
           aria-label="Close sidebar"
         >
           <X size={22} />
         </button>
       </div>
 
-      <nav className="flex-1 flex flex-col gap-1 px-3">
+      <nav className="flex-1 flex flex-col gap-1 px-3 overflow-y-auto">
         {navItems.map((item, index) => (
           <NavLink
             to={`${item.path}`}

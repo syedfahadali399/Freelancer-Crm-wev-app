@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Bell, LogOut, Menu } from "lucide-react";
 import { client } from "../sanityClient";
 
-const Header = ({ onMenuClick }) => {
+const Header = ({ onMenuClick, isSidebarOpen }) => {
 
   const { id } = useParams()
   const navigate = useNavigate();
@@ -45,12 +45,14 @@ const Header = ({ onMenuClick }) => {
 
   return (
     <>
-      <header className="h-16 border-b border-[#c5c6cd]/30 bg-white sticky top-0 z-10 px-6 flex items-center justify-between shadow-sm">
+      <header className="h-16 border-b border-[#c5c6cd]/30 bg-white sticky top-0 z-30 px-6 flex items-center justify-between shadow-sm">
         <div className="lg:hidden flex items-center gap-3">
           <button
+            type="button"
             onClick={onMenuClick}
             className="p-2 text-[#091426] hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Open menu"
+            aria-label={isSidebarOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isSidebarOpen}
           >
             <Menu size={22} />
           </button>

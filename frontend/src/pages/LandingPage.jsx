@@ -3,8 +3,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import landingPage1 from "../assets/landingPage_1.png";
-import landingPage2 from "../assets/landingPage_2.png";
+import landingPage1 from "../assets/landingPage_1.png?url";
+import landingPage2 from "../assets/landingPage_2.png?url";
 import "swiper/css/pagination";
 import "swiper/css";
 
@@ -232,10 +232,10 @@ const LandingPage = () => {
       </header>
 
       <main>
-        <section className="relative overflow-hidden pt-36 sm:pt-40 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto px-6">
+        <section className="relative overflow-hidden pt-40 sm:pt-44 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto px-5 sm:px-6">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(75,65,225,0.1),transparent_50%)]"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="max-w-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-14 sm:gap-y-16 gap-x-12 lg:gap-16 items-center">
+            <div className="max-w-2xl pt-2 sm:pt-0">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-bold text-[#091426] mb-6 tracking-tight">
                 Empower your{" "}
                 <span className="text-[#4b41e1] typing-text">
@@ -248,7 +248,7 @@ const LandingPage = () => {
                 professionals. Manage clients, track projects, and automate
                 invoicing without the enterprise bloat.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-10 sm:mb-0">
                 <Link
                   to={`/signup`}
                   className="inline-flex justify-center items-center font-medium text-white bg-[#4b41e1] hover:bg-[#3323cc] transition-all rounded-lg px-8 py-4 shadow-lg"
@@ -265,11 +265,13 @@ const LandingPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative lg:ml-auto w-full mt-8 sm:mt-10 lg:mt-0 rounded-2xl shadow-2xl border border-gray-200 bg-white group p-4 sm:p-6 lg:p-8">
+            <div className="relative lg:ml-auto w-full mt-4 sm:mt-6 lg:mt-0 rounded-2xl shadow-2xl border border-gray-200 bg-white group p-5 sm:p-6 lg:p-8">
               <img
                 alt="Dashboard Preview"
                 className="w-full h-auto rounded-xl object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                 src={landingPage1}
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
