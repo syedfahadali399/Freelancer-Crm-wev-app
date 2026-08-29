@@ -230,18 +230,18 @@ const LandingPage = () => {
       </header>
 
       <main>
-        <section className="relative overflow-hidden pt-32 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto">
+        <section className="relative overflow-hidden pt-32 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto px-6">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(75,65,225,0.1),transparent_50%)]"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-              <h1 className="text-5xl lg:text-6xl leading-[1.1] font-bold text-[#091426] mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-bold text-[#091426] mb-6 tracking-tight">
                 Empower your{" "}
                 <span className="text-[#4b41e1] typing-text">
                   {typedText}
                   <span className="typing-cursor" aria-hidden="true"></span>
                 </span>
               </h1>
-              <p className="text-lg text-gray-600 mb-10 max-w-xl leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 mb-10 max-w-xl leading-relaxed">
                 The all-in-one CRM built exclusively for independent
                 professionals. Manage clients, track projects, and automate
                 invoicing without the enterprise bloat.
@@ -263,7 +263,7 @@ const LandingPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative lg:ml-auto w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white group">
+            <div className="relative lg:ml-auto w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white group aspect-video lg:aspect-auto max-h-[420px] lg:max-h-none">
               <img
                 alt="Dashboard Preview"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
