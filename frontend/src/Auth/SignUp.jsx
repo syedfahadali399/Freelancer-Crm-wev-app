@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { client } from '../sanityClient';
 import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser'
+
 const SignUp = () => {
 
   const navigate = useNavigate()
@@ -26,7 +27,7 @@ const SignUp = () => {
     register, 
     getValues,
     handleSubmit, 
-    formState: { errors, isSubmitting } 
+    formState: { errors } 
   } = useForm({
     defaultValues: {
       fullname: "",
@@ -136,7 +137,7 @@ const SignUp = () => {
       reset()
   
     } catch (error) {
-      toast.error("An error occurred while creating your account. Please try again.")
+      toast.error("An error occurred while creating your account. Please try again.", error)
     }
   }
 
@@ -203,16 +204,16 @@ const SignUp = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[55%] flex flex-col justify-center items-center p-6 sm:p-12 lg:p-24 bg-white relative overflow-y-auto">
+      <div className="w-full lg:w-[55%] flex flex-col items-center bg-white overflow-y-auto py-10 px-6 sm:px-12 lg:px-24">
         
-        <div className="lg:hidden absolute top-8 left-8 flex items-center gap-2">
+        <div className="lg:hidden w-full max-w-110 flex items-center gap-2 mb-8">
           <div className="bg-[#4b41e1] p-1.5 rounded-md">
             <LayoutDashboard size={20} className="text-white" />
           </div>
           <span className="text-xl font-bold text-[#091426]">DevDesk</span>
         </div>
 
-        <div className="max-w-110 w-full">
+        <div className="max-w-110 w-full lg:my-auto">
           <div className="mb-10 text-center lg:text-left">
             <h2 className="text-3xl font-bold text-[#091426] mb-2">Create an account</h2>
             <p className="text-[#45474c] text-lg">Start managing your freelance business today.</p>
