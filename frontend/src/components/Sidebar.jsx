@@ -1,7 +1,7 @@
-import { LayoutDashboard, Users, FolderOpen, FileText, Settings } from 'lucide-react';
+import { LayoutDashboard, Users, FolderOpen, FileText, Settings, X } from 'lucide-react';
 import { Link, NavLink, useParams } from 'react-router';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
 
   const { id } = useParams()
 
@@ -13,10 +13,27 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="fixed left-0 top-0 h-full w-65 bg-[#091426] text-white flex flex-col py-6 z-20 lg:flex">
-      <div className="px-6 mb-8 flex flex-col gap-1">
-        <span className="text-2xl font-bold tracking-tight">DevDesk</span>
-        <span className="text-xs text-[#8590a6] uppercase tracking-wider font-semibold">Freelancer CRM</span>
+    <aside
+      className={`
+        fixed left-0 top-0 h-full w-65 bg-[#091426] text-white flex flex-col py-6 z-20
+        transition-transform duration-300 ease-in-out
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0
+      `}
+    >
+      {/* Header row: logo + close button (mobile only) */}
+      <div className="px-6 mb-8 flex items-start justify-between">
+        <div className="flex flex-col gap-1">
+          <span className="text-2xl font-bold tracking-tight">DevDesk</span>
+          <span className="text-xs text-[#8590a6] uppercase tracking-wider font-semibold">Freelancer CRM</span>
+        </div>
+        <button
+          onClick={onClose}
+          className="lg:hidden text-[#8590a6] hover:text-white transition-colors mt-1"
+          aria-label="Close sidebar"
+        >
+          <X size={22} />
+        </button>
       </div>
 
       <nav className="flex-1 flex flex-col gap-1 px-3">
@@ -25,6 +42,7 @@ const Sidebar = () => {
             to={`${item.path}`}
             key={index}
             href="#"
+            onClick={onClose}
             className={({isActive}) => ` ${isActive? "border-[#4b41e1] bg-[#1e293b] text-white font-medium": "border-transparent text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50"} flex items-center gap-3 px-4 py-3 rounded-r-lg border-l-4 transition-all duration-200`}
           >
             {item.icon}
@@ -33,7 +51,7 @@ const Sidebar = () => {
         ))}
 
         <div className="mt-auto">
-          <Link to={`/`} href="#" className="flex items-center gap-3 px-4 py-3 text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50 transition-all rounded-r-lg border-l-4 border-transparent">
+          <Link to={`/`} href="#" onClick={onClose} className="flex items-center gap-3 px-4 py-3 text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50 transition-all rounded-r-lg border-l-4 border-transparent">
             <Settings size={20} />
             <span className="text-sm">Settings</span>
           </Link>
