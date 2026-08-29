@@ -178,7 +178,7 @@ const Clients = () => {
       <main className="p-6 lg:p-8 pt-20 lg:pt-8">
         
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-          <h1 className="text-3xl font-bold text-[#091426]">Clients</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#091426] tracking-tight">Clients</h1>
           <Link to={`/dashboard/clients/add-client/${id}`} className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#4b41e1] text-white font-semibold rounded-lg hover:bg-[#3323cc] shadow-sm transition-all active:scale-[0.98]">
             <Plus size={18} />
             Add Client

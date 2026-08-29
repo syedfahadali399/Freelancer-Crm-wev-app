@@ -134,8 +134,8 @@ const ActiveProjects = () => {
         
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-[#091426]">Active Projects</h1>
-            <p className="text-sm text-[#45474c] mt-1">Manage and track your ongoing client work.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#091426] tracking-tight">Active Projects</h1>
+            <p className="text-sm sm:text-sm text-[#45474c] mt-1">Manage and track your ongoing client work.</p>
           </div>
           <Link to={`/dashboard/active-projects/add-project/${id}`} className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#4b41e1] text-white font-bold rounded-lg hover:bg-[#3323cc] shadow-md transition-all active:scale-[0.98]">
             <Plus size={18} />

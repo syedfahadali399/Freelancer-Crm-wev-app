@@ -87,8 +87,8 @@ const Dashboard = () => {
           
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold text-[#091426]">Overview</h1>
-            <p className="text-sm text-[#45474c]">Here's a summary of your business activities.</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#091426] tracking-tight">Overview</h1>
+            <p className="text-sm sm:text-sm text-[#45474c] mt-1">Here's a summary of your business activities.</p>
           </div>
           <div className="flex items-center gap-3">
             <div className="relative">

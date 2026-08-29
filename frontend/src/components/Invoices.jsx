@@ -129,7 +129,7 @@ const Invoices = () => {
     <>
       <main className="p-6 lg:p-8 pt-20 lg:pt-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-            <h1 className="text-3xl font-bold text-[#091426]">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#091426] tracking-tight">
               All Invoices
             </h1>
           <Link
