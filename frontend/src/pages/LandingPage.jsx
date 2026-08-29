@@ -3,6 +3,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import landingPage1 from "../assets/landingPage_1.png";
+import landingPage2 from "../assets/landingPage_2.png";
 import "swiper/css/pagination";
 import "swiper/css";
 
@@ -230,9 +232,9 @@ const LandingPage = () => {
       </header>
 
       <main>
-        <section className="relative overflow-hidden pt-32 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto px-6">
+        <section className="relative overflow-hidden pt-36 sm:pt-40 pb-24 lg:pt-48 lg:pb-32 max-w-7xl mx-auto px-6">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(75,65,225,0.1),transparent_50%)]"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-2xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] font-bold text-[#091426] mb-6 tracking-tight">
                 Empower your{" "}
@@ -263,11 +265,11 @@ const LandingPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative lg:ml-auto w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white group aspect-video lg:aspect-auto max-h-[420px] lg:max-h-none">
+            <div className="relative lg:ml-auto w-full mt-8 sm:mt-10 lg:mt-0 rounded-2xl shadow-2xl border border-gray-200 bg-white group p-4 sm:p-6 lg:p-8">
               <img
                 alt="Dashboard Preview"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="/public/landingPage_1.png"
+                className="w-full h-auto rounded-xl object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                src={landingPage1}
               />
             </div>
           </div>
@@ -309,7 +311,7 @@ const LandingPage = () => {
               <div className="hover-3d">
                 <figure className="hover-3d-card max-w-130 rounded-2xl overflow-hidden border border-gray-200 shadow-2xl bg-white">
                   <img
-                    src="/public/landingPage_2.png"
+                    src={landingPage2}
                     alt="3D card"
                     className="w-full h-auto"
                   />
