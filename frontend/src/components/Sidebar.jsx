@@ -15,10 +15,10 @@ const Sidebar = ({ isOpen, onClose }) => {
   return (
     <aside
       className={`
-        fixed left-0 top-0 h-full w-65 bg-[#091426] text-white flex flex-col py-6 z-20
+        fixed left-0 top-0 z-40 h-full w-[260px] bg-[#091426] text-white flex flex-col py-6
         transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0
+        -translate-x-full lg:translate-x-0
+        ${isOpen ? 'max-lg:translate-x-0' : ''}
       `}
     >
       {/* Header row: logo + close button (mobile only) */}
@@ -41,7 +41,6 @@ const Sidebar = ({ isOpen, onClose }) => {
           <NavLink
             to={`${item.path}`}
             key={index}
-            href="#"
             onClick={onClose}
             className={({isActive}) => ` ${isActive? "border-[#4b41e1] bg-[#1e293b] text-white font-medium": "border-transparent text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50"} flex items-center gap-3 px-4 py-3 rounded-r-lg border-l-4 transition-all duration-200`}
           >
@@ -51,7 +50,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         ))}
 
         <div className="mt-auto">
-          <Link to={`/`} href="#" onClick={onClose} className="flex items-center gap-3 px-4 py-3 text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50 transition-all rounded-r-lg border-l-4 border-transparent">
+          <Link to={`/`} onClick={onClose} className="flex items-center gap-3 px-4 py-3 text-[#8590a6] hover:text-white hover:bg-[#1e293b]/50 transition-all rounded-r-lg border-l-4 border-transparent">
             <Settings size={20} />
             <span className="text-sm">Settings</span>
           </Link>
