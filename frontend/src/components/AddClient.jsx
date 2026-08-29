@@ -134,7 +134,7 @@ const AddClient = () => {
 
   return (
     <>
-      <main className="flex-1 p-6 lg:p-10 flex justify-center items-start">
+      <main className="flex-1 p-6 pt-20 lg:p-10 lg:pt-10 flex justify-center items-start">
         <div className="w-full max-w-2xl bg-white rounded-xl border border-[#F1F5F9] shadow-[0_4px_12px_rgba(9,20,38,0.05)] overflow-hidden">
           
           <div className="px-6 py-5 border-b border-[#F1F5F9] flex items-center justify-between">

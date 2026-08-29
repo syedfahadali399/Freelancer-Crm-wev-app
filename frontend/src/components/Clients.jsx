@@ -175,7 +175,7 @@ const Clients = () => {
 
   return (
     <>
-      <main className="p-6 lg:p-8">
+      <main className="p-6 lg:p-8 pt-20 lg:pt-8">
         
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <h1 className="text-3xl font-bold text-[#091426]">Clients</h1>
@@ -283,7 +283,7 @@ const Clients = () => {
             </table>
           </div>
 
-          <div className="p-4 border-t border-[#c5c6cd]/30 bg-white flex items-center justify-between">
+          <div className="p-4 border-t border-[#c5c6cd]/30 bg-white flex flex-col sm:flex-row items-center justify-between gap-3">
             <span className="text-sm text-[#45474c]">Showing {currentIndex} to {Math.ceil(totalIndex)} of {clientsList?.length} clients</span>
             <div className="flex items-center gap-2">
               <button 

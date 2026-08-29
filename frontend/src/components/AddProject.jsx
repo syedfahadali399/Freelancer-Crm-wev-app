@@ -137,7 +137,7 @@ const AddProject = () => {
 
   return (
     <>
-      <main className="flex-1 p-4 lg:p-10 flex justify-center items-start">
+      <main className="flex-1 p-4 pt-20 lg:p-10 lg:pt-10 flex justify-center items-start">
         <div className="w-full max-w-2xl bg-white rounded-xl border border-[#c5c6cd]/30 shadow-[0_4px_20px_rgba(9,20,38,0.06)] overflow-hidden">
           <div className="px-6 py-5 border-b border-[#c5c6cd]/20 flex items-center justify-between">
             <div>
